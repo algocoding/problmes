@@ -7,21 +7,21 @@ int dx[] = {0 ,0, 1, -1};
 int dy[] = {1, -1, 0, 0};
 int dfs(int x, int y){
     
-    visit[x][y] = 1;
+    //visit[x][y] = 1;
     int max = 0;
     for(int i = 0; i < 4; i++)
     {
         int tx = x + dx[i];
         int ty = y + dy[i];
         if(tx < 0 || ty < 0 || tx == N || ty == N) continue;
-        if(visit[tx][ty]) continue;
+       //if(visit[tx][ty]) continue;
         if(map[x][y] + 1 == map[tx][ty])
         {
             int ret = dfs(tx , ty);
             if(ret > max) max = ret;
         }
     }                
-    visit[x][y] = 0;
+    //visit[x][y] = 0;
     return max + 1;
 }
 int main()
@@ -44,7 +44,8 @@ int main()
                 if(ret > max){
                     max = ret;
                     ans = map[x][y];
-                }else if(ret == max && map[x][y])
+                }else if(ret == max && ans > map[x][y])
+                    ans = map[x][y];
             }
         }
         printf("#%d %d %d\n", tc, ans, max);
