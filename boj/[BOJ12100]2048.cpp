@@ -121,11 +121,7 @@ void move(int cur[][20], int next[][20], int dir)
 		}
 	}
 }
-void copyarr(int from[][20], int to[][20]){
-	for (int i = 0; i < N; i++)
-		for (int j = 0; j < N; j++)
-			to[i][j] = from[i][j];
-}
+
 void play(int k, int cur[][20])
 {
 	if (k == CNT){		
