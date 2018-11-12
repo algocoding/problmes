@@ -1,6 +1,6 @@
-//https://www.acmicpc.net/problem/14501
+//https://www.acmicpc.net/problem/15486
 #include <stdio.h>
-const int MAXN = 15;
+const int MAXN = 1500000;
 int dp[MAXN + 2] = { 0, };
 int T[MAXN + 2], P[MAXN + 2];
 
